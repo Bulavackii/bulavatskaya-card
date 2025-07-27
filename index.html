@@ -10,10 +10,11 @@
 
   <style>
     :root {
-      --bg-color: #f8fafc;
+      --bg-color: #e0f7fa;
       --text-color: #334155;
       --block-bg: #ffffff;
       --block-border: #cbd5e1;
+      --accent: #1d4ed8;
     }
     body.high-contrast {
       --bg-color: #000;
@@ -23,7 +24,7 @@
     }
     body {
       font-family: 'Montserrat', sans-serif;
-      background: var(--bg-color);
+      background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
       margin: 0;
       padding: 0;
       display: flex;
@@ -64,7 +65,7 @@
     }
     .surname {
       font-size: 1.2rem;
-      color: #1d4ed8;
+      color: var(--accent);
       text-transform: uppercase;
       font-weight: 700;
       margin-bottom: 0.2rem;
@@ -72,14 +73,14 @@
     .name {
       font-size: 1.1rem;
       font-weight: 500;
-      color: #1d4ed8;
+      color: var(--accent);
     }
     .avatar {
       width: 90px;
       height: 90px;
       object-fit: cover;
       border-radius: 50%;
-      border: 2px solid #1d4ed8;
+      border: 2px solid var(--accent);
     }
     h2 {
       font-size: 0.95rem;
@@ -99,7 +100,7 @@
       background: var(--bg-color);
     }
     .info-block a {
-      color: #1d4ed8;
+      color: var(--accent);
       font-weight: 500;
       text-decoration: none;
     }
@@ -107,18 +108,23 @@
       text-decoration: underline;
     }
     .bi {
-      color: #1d4ed8;
+      color: var(--accent);
       font-size: 1rem;
     }
     .address {
-      margin-top: 1rem;
-      font-size: 0.9rem;
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 1rem;
+      background: linear-gradient(to right, #d0f0ff, #ffffff);
+      border-radius: 0.75rem;
+      border-left: 5px solid var(--accent);
     }
     .quote {
       font-style: italic;
       font-size: 0.9rem;
       background: #f1f5f9;
-      border-left: 4px solid #1d4ed8;
+      border-left: 4px solid var(--accent);
       padding: 1rem;
       margin: 2rem 0 1.5rem 0;
       border-radius: 0.5rem;
