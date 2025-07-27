@@ -6,28 +6,26 @@
   <title>Анна Булавацкая – Визитка</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTTXRV4D1kJ0I1uI1Gp+PLCLtddSUFtrb4zIQnY2HZ3B5bTJGqf3lFZ5Xh5pZll+y4+o/23Zow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
-      background: #f1f5f9;
+      background: linear-gradient(135deg, #e0f2fe, #f8fafc);
       margin: 0;
-      padding: 0;
+      padding: 2rem;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
-      min-height: 100vh;
     }
     .card {
       background: white;
-      border-radius: 1.5rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      max-width: 500px;
-      width: 100%;
+      border-radius: 1rem;
+      max-width: 600px;
       padding: 2rem;
-      margin: 2rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       position: relative;
+      transition: background 0.3s, color 0.3s;
     }
-    .contrast .card {
+    .card.dark {
       background: #000;
       color: #fff;
     }
@@ -35,143 +33,132 @@
       position: absolute;
       top: 1rem;
       right: 1rem;
-    }
-    .theme-toggle button {
-      padding: 0.4rem 0.8rem;
-      border-radius: 5px;
-      background-color: #1e3a8a;
+      background: #1e40af;
       color: white;
       border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
       cursor: pointer;
     }
     .logo {
-      width: 100%;
-      max-height: 120px;
-      object-fit: contain;
-      margin-bottom: 0.5rem;
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
     }
-    .title-block {
+    .header {
       text-align: center;
       margin-bottom: 1.5rem;
-    }
-    .title-block h2 {
-      margin: 0.2rem 0;
-      font-size: 1rem;
-      color: #334155;
-    }
-    .photo-name {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1rem;
-    }
-    .photo-name img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 2px solid #cbd5e1;
-      margin-right: 1rem;
-    }
-    .name-block {
-      flex-grow: 1;
-    }
-    .name-block h1 {
-      margin: 0;
-      font-size: 1.2rem;
-      color: #1d4ed8;
-      text-transform: uppercase;
-    }
-    .name-block h2 {
-      margin: 0;
-      font-size: 1rem;
-      color: #334155;
-      text-transform: none;
-    }
-    .position-block {
-      text-align: left;
-      margin-bottom: 1rem;
-      color: #334155;
-    }
-    .position-block p {
-      margin: 0.2rem 0;
     }
     .info-block {
       display: flex;
       align-items: center;
-      background: #f8fafc;
-      padding: 0.6rem 0.8rem;
-      margin: 0.3rem 0;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .photo {
+      flex: 1;
+      max-width: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .photo img {
+      width: 100%;
+      height: auto;
+    }
+    .person-info {
+      flex: 2;
+    }
+    .person-info h1 {
+      margin: 0;
+      color: #1d4ed8;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+    }
+    .person-info h2 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #334155;
+    }
+    .details {
+      margin-top: 1rem;
+    }
+    .contact {
+      display: flex;
+      align-items: center;
+      background: #f1f5f9;
       border-radius: 0.5rem;
-      font-size: 0.95rem;
-      color: #1e293b;
+      padding: 0.6rem;
+      margin: 0.4rem 0;
+      color: #1f2937;
     }
-    .info-block i {
+    .contact i {
       margin-right: 0.6rem;
-      color: #1e40af;
+      width: 18px;
+      text-align: center;
     }
-    .info-block a {
+    .contact a {
       color: #2563eb;
       text-decoration: none;
     }
-    .info-block a:hover {
+    .contact a:hover {
       text-decoration: underline;
     }
+    .address {
+      font-weight: bold;
+    }
     .quote {
-      background: #f1f5f9;
-      padding: 1rem;
       margin-top: 1.5rem;
+      padding: 1rem;
+      background: #f1f5f9;
       font-style: italic;
-      font-size: 0.9rem;
       border-radius: 0.5rem;
       text-align: left;
-      color: #475569;
     }
     .download {
+      margin-top: 1.5rem;
       text-align: center;
-      margin-top: 1rem;
     }
     .download a {
-      display: inline-block;
       background: #2563eb;
       color: white;
       padding: 0.6rem 1.2rem;
       border-radius: 8px;
       text-decoration: none;
     }
-    .download a:hover {
-      background: #1e40af;
-    }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="theme-toggle">
-      <button onclick="toggleTheme()">Версия для слабовидящих</button>
+  <div class="card" id="card">
+    <button class="theme-toggle" onclick="toggleTheme()">Версия для слабовидящих</button>
+    <div class="header">
+      <img src="gerb_white.jpg" id="emblem" class="logo" alt="Герб Росводресурсов">
+      <div>Московско-Окское бассейновое водное управление</div>
+      <div>Федерального агентства водных ресурсов</div>
     </div>
-    <img class="logo" id="logo-img" src="gerb_white.jpg" alt="Герб">
-    <div class="title-block">
-      <h2>Московско-Окское бассейновое водное управление</h2>
-      <h2>Федерального агентства водных ресурсов</h2>
-    </div>
-    <div class="photo-name">
-      <img src="ava.png" alt="Фото Анны">
-      <div class="name-block">
+    <div class="info-block">
+      <div class="photo">
+        <img src="ava.png" alt="Фото">
+      </div>
+      <div class="person-info">
         <h1>БУЛАВАЦКАЯ</h1>
         <h2>Анна Алексеевна</h2>
       </div>
     </div>
-    <div class="position-block">
-      <p>главный специалист-эксперт</p>
-      <p>отдел государственной службы, кадров и делопроизводства</p>
-      <p>Московско-Окское БВУ</p>
-      <p>Росводресурсы</p>
+    <div class="details">
+      <div class="job-title">
+        главный специалист-эксперт<br>
+        отдел государственной службы, кадров и делопроизводства<br>
+        Московско-Окское БВУ<br>
+        Росводресурсы
+      </div>
+      <div class="contact"><i class="fas fa-mobile-alt"></i><strong>Моб.:</strong>&nbsp;<a href="tel:+79256277718">+7 (925) 627-77-18</a></div>
+      <div class="contact"><i class="fas fa-phone"></i><strong>Тел. раб.:</strong>&nbsp;<a href="tel:+74955879907">+7 (495) 587-99-07, доб.161</a></div>
+      <div class="contact"><i class="fas fa-envelope"></i><strong>Email:</strong>&nbsp;<a href="mailto:anna.bulavatskaya@voda.gov.ru">anna.bulavatskaya@voda.gov.ru</a></div>
+      <div class="contact"><i class="fas fa-globe"></i><strong>Сайт:</strong>&nbsp;<a href="https://www.m-obvu.ru/" target="_blank">www.m-obvu.ru</a></div>
+      <div class="contact"><i class="fab fa-vk"></i><strong>VK:</strong>&nbsp;<a href="https://vk.com/club217101985" target="_blank">vk.com/club217101985</a></div>
+      <div class="contact address"><i class="fas fa-map-marker-alt"></i><strong>Адрес:</strong>&nbsp;улица Верхняя Красносельская, дом 17А, стр. 1Б, г. Москва, 107140</div>
     </div>
-    <div class="info-block"><i>📱</i><strong>Моб.:</strong>&nbsp;<a href="tel:+79256277718">+7 (925) 627-77-18</a></div>
-    <div class="info-block"><i>☎️</i><strong>Тел. раб.:</strong>&nbsp;<a href="tel:+74955879907">+7 (495) 587-99-07, доб.161</a></div>
-    <div class="info-block"><i>📧</i><strong>Email:</strong>&nbsp;<a href="mailto:anna.bulavatskaya@voda.gov.ru">anna.bulavatskaya@voda.gov.ru</a></div>
-    <div class="info-block"><i>🌐</i><strong>Сайт:</strong>&nbsp;<a href="https://www.m-obvu.ru/" target="_blank">www.m-obvu.ru</a></div>
-    <div class="info-block"><i>👥</i><strong>VK:</strong>&nbsp;<a href="https://vk.com/club217101985" target="_blank">vk.com/club217101985</a></div>
-    <div class="info-block"><i>📍</i><strong>Адрес:</strong>&nbsp;улица Верхняя Красносельская, дом 17А, стр. 1Б, г. Москва, 107140</div>
     <div class="quote">
       "Всего одно знакомство может стать источником, из которого вырастет океан возможностей"
     </div>
@@ -181,12 +168,13 @@
   </div>
   <script>
     function toggleTheme() {
-      document.body.classList.toggle('contrast');
-      const img = document.getElementById('logo-img');
-      if (document.body.classList.contains('contrast')) {
-        img.src = 'gerb_black.jpg';
+      const card = document.getElementById('card');
+      const emblem = document.getElementById('emblem');
+      card.classList.toggle('dark');
+      if (card.classList.contains('dark')) {
+        emblem.src = 'gerb_black.jpg';
       } else {
-        img.src = 'gerb_white.jpg';
+        emblem.src = 'gerb_white.jpg';
       }
     }
   </script>
