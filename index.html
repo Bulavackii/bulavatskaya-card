@@ -6,217 +6,189 @@
   <title>Анна Булавацкая – Визитка</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
   <style>
-    :root {
-      --bg-color: #f8fafc;
-      --text-color: #334155;
-      --block-bg: #ffffff;
-      --block-border: #cbd5e1;
-      --accent: #1d4ed8;
-    }
-    body.high-contrast {
-      --bg-color: #000;
-      --text-color: #fff;
-      --block-bg: #111;
-      --block-border: #555;
-    }
     body {
       font-family: 'Montserrat', sans-serif;
-      background: var(--bg-color);
+      background: #f1f5f9;
       margin: 0;
       padding: 0;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       min-height: 100vh;
-      color: var(--text-color);
-      transition: background 0.3s ease, color 0.3s ease;
     }
     .card {
-      background: var(--block-bg);
+      background: white;
       border-radius: 1.5rem;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      max-width: 580px;
+      max-width: 500px;
+      width: 100%;
       padding: 2rem;
-      animation: fadeIn 0.8s ease;
-      border: 1px solid var(--block-border);
+      margin: 2rem;
+      position: relative;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+    .contrast .card {
+      background: #000;
+      color: #fff;
+    }
+    .theme-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+    .theme-toggle button {
+      padding: 0.4rem 0.8rem;
+      border-radius: 5px;
+      background-color: #1e3a8a;
+      color: white;
+      border: none;
+      cursor: pointer;
     }
     .logo {
-      display: block;
-      width: 120px;
-      margin: 0 auto;
-    }
-    body.high-contrast .logo-light {
-      display: none;
-    }
-    body:not(.high-contrast) .logo-dark {
-      display: none;
-    }
-    .header-label {
-      text-align: center;
-      margin-top: 1rem;
-      font-size: 0.95rem;
-      line-height: 1.4;
-      font-weight: 500;
-    }
-    .identity {
-      display: flex;
-      gap: 1rem;
-      margin: 2rem 0 1.2rem;
-      align-items: center;
-    }
-    .avatar {
-      width: 33%;
-      max-width: 120px;
-      height: auto;
-      border-radius: 12px;
-      object-fit: cover;
-      border: 2px solid var(--accent);
-    }
-    .name-block {
-      width: 67%;
-      text-align: left;
-    }
-    .surname {
-      font-size: 1.2rem;
-      color: var(--accent);
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-    .name {
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: var(--accent);
+      width: 100%;
+      max-height: 120px;
+      object-fit: contain;
       margin-bottom: 0.5rem;
     }
-    .position-block {
-      font-size: 0.95rem;
-      color: var(--text-color);
-      display: flex;
-      flex-direction: column;
-      gap: 0.3rem;
+    .title-block {
+      text-align: center;
+      margin-bottom: 1.5rem;
     }
-    .info-block {
-      border: 1px solid var(--block-border);
-      border-radius: 0.75rem;
-      padding: 0.8rem 1rem;
-      margin-bottom: 0.6rem;
+    .title-block h2 {
+      margin: 0.2rem 0;
+      font-size: 1rem;
+      color: #334155;
+    }
+    .photo-name {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .photo-name img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #cbd5e1;
+      margin-right: 1rem;
+    }
+    .name-block {
+      flex-grow: 1;
+    }
+    .name-block h1 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: #1d4ed8;
+      text-transform: uppercase;
+    }
+    .name-block h2 {
+      margin: 0;
+      font-size: 1rem;
+      color: #334155;
+      text-transform: none;
+    }
+    .position-block {
+      text-align: left;
+      margin-bottom: 1rem;
+      color: #334155;
+    }
+    .position-block p {
+      margin: 0.2rem 0;
+    }
+    .info-block {
+      display: flex;
+      align-items: center;
+      background: #f8fafc;
+      padding: 0.6rem 0.8rem;
+      margin: 0.3rem 0;
+      border-radius: 0.5rem;
       font-size: 0.95rem;
-      background: var(--bg-color);
+      color: #1e293b;
+    }
+    .info-block i {
+      margin-right: 0.6rem;
+      color: #1e40af;
     }
     .info-block a {
-      color: var(--accent);
-      font-weight: 500;
+      color: #2563eb;
       text-decoration: none;
     }
     .info-block a:hover {
       text-decoration: underline;
     }
-    .bi {
-      color: var(--accent);
-      font-size: 1rem;
-    }
-    .address {
-      font-weight: 500;
-      font-size: 0.95rem;
-      margin-top: 0.6rem;
-      text-align: left;
-    }
     .quote {
+      background: #f1f5f9;
+      padding: 1rem;
+      margin-top: 1.5rem;
       font-style: italic;
       font-size: 0.9rem;
-      background: #f1f5f9;
-      border-left: 4px solid var(--accent);
-      padding: 1rem;
-      margin: 2rem 0 1.5rem 0;
       border-radius: 0.5rem;
       text-align: left;
-    }
-    body.high-contrast .quote {
-      background: #1a1a1a;
+      color: #475569;
     }
     .download {
+      text-align: center;
       margin-top: 1rem;
     }
     .download a {
+      display: inline-block;
       background: #2563eb;
       color: white;
       padding: 0.6rem 1.2rem;
       border-radius: 8px;
       text-decoration: none;
-      transition: background 0.3s ease;
-      display: inline-block;
     }
     .download a:hover {
       background: #1e40af;
     }
-    .toggle-theme {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background: #1e3a8a;
-      color: white;
-      border: none;
-      border-radius: 0.5rem;
-      padding: 0.4rem 0.8rem;
-      cursor: pointer;
-      font-size: 0.8rem;
-    }
   </style>
 </head>
 <body>
-  <button class="toggle-theme" onclick="document.body.classList.toggle('high-contrast')">Версия для слабовидящих</button>
-
   <div class="card">
-    <img class="logo logo-light" src="gerb_white.jpg" alt="Герб светлый">
-    <img class="logo logo-dark" src="gerb_black.jpg" alt="Герб тёмный">
-
-    <div class="header-label">
-      Московско-Окское бассейновое водное управление<br />
-      Федерального агентства водных ресурсов
+    <div class="theme-toggle">
+      <button onclick="toggleTheme()">Версия для слабовидящих</button>
     </div>
-
-    <div class="identity">
-      <img class="avatar" src="ava.png" alt="Моя фотография">
+    <img class="logo" id="logo-img" src="gerb_white.jpg" alt="Герб">
+    <div class="title-block">
+      <h2>Московско-Окское бассейновое водное управление</h2>
+      <h2>Федерального агентства водных ресурсов</h2>
+    </div>
+    <div class="photo-name">
+      <img src="ava.png" alt="Фото Анны">
       <div class="name-block">
-        <div class="surname">БУЛАВАЦКАЯ</div>
-        <div class="name">Анна Алексеевна</div>
-        <div class="position-block">
-          <div>главный специалист-эксперт</div>
-          <div>отдел государственной службы, кадров и делопроизводства</div>
-          <div>Московско-Окское БВУ</div>
-          <div>Росводресурсы</div>
-        </div>
+        <h1>БУЛАВАЦКАЯ</h1>
+        <h2>Анна Алексеевна</h2>
       </div>
     </div>
-
-    <div class="info-block"><i class="bi bi-phone"></i><strong>Моб.:</strong>&nbsp;<a href="tel:+79256277718">+7 (925) 627-77-18</a></div>
-    <div class="info-block"><i class="bi bi-telephone"></i><strong>Тел. раб.:</strong>&nbsp;<a href="tel:+74955879907">+7 (495) 587-99-07, доб.161</a></div>
-    <div class="info-block"><i class="bi bi-envelope"></i><strong>Email:</strong>&nbsp;<a href="mailto:anna.bulavatskaya@voda.gov.ru">anna.bulavatskaya@voda.gov.ru</a></div>
-    <div class="info-block"><i class="bi bi-globe"></i><strong>Сайт:</strong>&nbsp;<a href="https://www.m-obvu.ru/" target="_blank" rel="noopener noreferrer">www.m-obvu.ru</a></div>
-    <div class="info-block"><i class="bi bi-vinyl"></i><strong>VK:</strong>&nbsp;<a href="https://vk.com/club217101985" target="_blank" rel="noopener noreferrer">vk.com/club217101985</a></div>
-    <div class="info-block address">
-      <i class="bi bi-geo-alt"></i>
-      Адрес: улица Верхняя Красносельская, дом 17А, стр. 1Б, г. Москва, 107140
+    <div class="position-block">
+      <p>главный специалист-эксперт</p>
+      <p>отдел государственной службы, кадров и делопроизводства</p>
+      <p>Московско-Окское БВУ</p>
+      <p>Росводресурсы</p>
     </div>
-
+    <div class="info-block"><i>📱</i><strong>Моб.:</strong>&nbsp;<a href="tel:+79256277718">+7 (925) 627-77-18</a></div>
+    <div class="info-block"><i>☎️</i><strong>Тел. раб.:</strong>&nbsp;<a href="tel:+74955879907">+7 (495) 587-99-07, доб.161</a></div>
+    <div class="info-block"><i>📧</i><strong>Email:</strong>&nbsp;<a href="mailto:anna.bulavatskaya@voda.gov.ru">anna.bulavatskaya@voda.gov.ru</a></div>
+    <div class="info-block"><i>🌐</i><strong>Сайт:</strong>&nbsp;<a href="https://www.m-obvu.ru/" target="_blank">www.m-obvu.ru</a></div>
+    <div class="info-block"><i>👥</i><strong>VK:</strong>&nbsp;<a href="https://vk.com/club217101985" target="_blank">vk.com/club217101985</a></div>
+    <div class="info-block"><i>📍</i><strong>Адрес:</strong>&nbsp;улица Верхняя Красносельская, дом 17А, стр. 1Б, г. Москва, 107140</div>
     <div class="quote">
       "Всего одно знакомство может стать источником, из которого вырастет океан возможностей"
     </div>
-
     <div class="download">
       <a href="anna-bulavatskaya.vcf" download>Скачать контакт</a>
     </div>
   </div>
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('contrast');
+      const img = document.getElementById('logo-img');
+      if (document.body.classList.contains('contrast')) {
+        img.src = 'gerb_black.jpg';
+      } else {
+        img.src = 'gerb_white.jpg';
+      }
+    }
+  </script>
 </body>
 </html>
