@@ -38,9 +38,8 @@
       background: var(--block-bg);
       border-radius: 1.5rem;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      max-width: 520px;
+      max-width: 580px;
       padding: 2rem;
-      text-align: center;
       animation: fadeIn 0.8s ease;
       border: 1px solid var(--block-border);
     }
@@ -49,18 +48,39 @@
       to { opacity: 1; transform: translateY(0); }
     }
     .logo {
-      width: 100%;
-      border-radius: 1rem;
-      margin-bottom: 1.5rem;
+      display: block;
+      width: 120px;
+      margin: 0 auto;
+    }
+    body.high-contrast .logo-light {
+      display: none;
+    }
+    body:not(.high-contrast) .logo-dark {
+      display: none;
+    }
+    .header-label {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.4;
+      font-weight: 500;
     }
     .identity {
       display: flex;
-      align-items: center;
-      justify-content: center;
       gap: 1rem;
-      margin-bottom: 1rem;
+      margin: 2rem 0 1.2rem;
+      align-items: center;
+    }
+    .avatar {
+      width: 33%;
+      max-width: 120px;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 2px solid var(--accent);
     }
     .name-block {
+      width: 67%;
       text-align: left;
     }
     .surname {
@@ -68,24 +88,19 @@
       color: var(--accent);
       text-transform: uppercase;
       font-weight: 700;
-      margin-bottom: 0.2rem;
     }
     .name {
       font-size: 1.1rem;
       font-weight: 500;
       color: var(--accent);
+      margin-bottom: 0.5rem;
     }
-    .avatar {
-      width: 90px;
-      height: 90px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 2px solid var(--accent);
-    }
-    h2 {
+    .position-block {
       font-size: 0.95rem;
-      font-weight: 500;
-      margin-bottom: 1.5rem;
+      color: var(--text-color);
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
     }
     .info-block {
       border: 1px solid var(--block-border);
@@ -112,9 +127,10 @@
       font-size: 1rem;
     }
     .address {
-      margin-top: 1.5rem;
+      font-weight: 500;
       font-size: 0.95rem;
-      font-weight: bold;
+      margin-top: 0.6rem;
+      text-align: left;
     }
     .quote {
       font-style: italic;
@@ -124,6 +140,7 @@
       padding: 1rem;
       margin: 2rem 0 1.5rem 0;
       border-radius: 0.5rem;
+      text-align: left;
     }
     body.high-contrast .quote {
       background: #1a1a1a;
@@ -161,26 +178,36 @@
   <button class="toggle-theme" onclick="document.body.classList.toggle('high-contrast')">Версия для слабовидящих</button>
 
   <div class="card">
-    <img class="logo" src="gerb.png" alt="Герб Росводресурсов">
+    <img class="logo logo-light" src="gerb_white.jpg" alt="Герб светлый">
+    <img class="logo logo-dark" src="gerb_black.jpg" alt="Герб тёмный">
+
+    <div class="header-label">
+      Московско-Окское бассейновое водное управление<br />
+      Федерального агентства водных ресурсов
+    </div>
 
     <div class="identity">
+      <img class="avatar" src="ava.png" alt="Моя фотография">
       <div class="name-block">
         <div class="surname">БУЛАВАЦКАЯ</div>
         <div class="name">Анна Алексеевна</div>
+        <div class="position-block">
+          <div>главный специалист-эксперт</div>
+          <div>отдел государственной службы, кадров и делопроизводства</div>
+          <div>Московско-Окское БВУ</div>
+          <div>Росводресурсы</div>
+        </div>
       </div>
-      <img class="avatar" src="ava.png" alt="Моя фотография">
     </div>
-
-    <h2>Главный специалист-эксперт отдела государственной службы, кадров и делопроизводства Московско-Окского БВУ Росводресурсов</h2>
 
     <div class="info-block"><i class="bi bi-phone"></i><strong>Моб.:</strong>&nbsp;<a href="tel:+79256277718">+7 (925) 627-77-18</a></div>
     <div class="info-block"><i class="bi bi-telephone"></i><strong>Тел. раб.:</strong>&nbsp;<a href="tel:+74955879907">+7 (495) 587-99-07, доб.161</a></div>
     <div class="info-block"><i class="bi bi-envelope"></i><strong>Email:</strong>&nbsp;<a href="mailto:anna.bulavatskaya@voda.gov.ru">anna.bulavatskaya@voda.gov.ru</a></div>
     <div class="info-block"><i class="bi bi-globe"></i><strong>Сайт:</strong>&nbsp;<a href="https://www.m-obvu.ru/" target="_blank" rel="noopener noreferrer">www.m-obvu.ru</a></div>
     <div class="info-block"><i class="bi bi-vinyl"></i><strong>VK:</strong>&nbsp;<a href="https://vk.com/club217101985" target="_blank" rel="noopener noreferrer">vk.com/club217101985</a></div>
-
-    <div class="address">
-      Адрес Московско-Окского БВУ:<br />улица Верхняя Красносельская, дом 17А, стр. 1Б,<br />г. Москва, 107140
+    <div class="info-block address">
+      <i class="bi bi-geo-alt"></i>
+      Адрес: улица Верхняя Красносельская, дом 17А, стр. 1Б, г. Москва, 107140
     </div>
 
     <div class="quote">
