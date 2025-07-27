@@ -8,14 +8,6 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-  <!-- SEO и соцсети -->
-  <meta property="og:title" content="Анна Булавацкая – Визитка" />
-  <meta property="og:description" content="Главный специалист – эксперт отдела государственной службы, кадров и делопроизводства Московско-Окского БВУ Росводресурсов" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="gerb.png" />
-  <meta property="og:url" content="https://bulavckii.github.io/bulavatskaya-card/" />
-  <meta name="twitter:card" content="summary_large_image" />
-
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
@@ -32,13 +24,9 @@
       border-radius: 1.5rem;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       max-width: 520px;
-      padding: 2.5rem;
+      padding: 2rem;
       text-align: center;
-      transition: transform 0.3s ease;
       animation: fadeIn 0.8s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
     }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
@@ -46,20 +34,18 @@
     }
     .logo {
       width: 100%;
-      max-width: 300px;
-      margin: 0 auto 1.5rem auto;
-      display: block;
+      border-radius: 1rem;
+      margin-bottom: 1.5rem;
     }
     .identity {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      text-align: left;
-      margin-bottom: 1rem;
+      justify-content: center;
       gap: 1rem;
+      margin-bottom: 1rem;
     }
     .name-block {
-      flex: 1;
+      text-align: left;
     }
     .surname {
       font-size: 1.2rem;
@@ -84,47 +70,32 @@
       font-size: 0.95rem;
       font-weight: 500;
       color: #334155;
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.5rem;
     }
-    p, a {
+    .info-block {
+      border: 1px solid #cbd5e1;
+      border-radius: 0.75rem;
+      padding: 0.8rem 1rem;
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 0.5rem;
       font-size: 0.95rem;
       color: #475569;
-      text-decoration: none;
-      margin: 0.4rem 0;
-      word-wrap: break-word;
+      background: #f8fafc;
     }
-    a {
-      display: inline-block;
-    }
-    a[href^="tel"] {
+    .info-block a {
       color: #1d4ed8;
-      font-weight: 600;
+      font-weight: 500;
+      text-decoration: none;
     }
-    a:hover {
-      color: #2563eb;
+    .info-block a:hover {
       text-decoration: underline;
     }
-    .qr {
-      margin-top: 1.8rem;
-    }
-    .qr img {
-      width: 140px;
-      height: 140px;
-      border-radius: 0.75rem;
-    }
-    .download {
-      margin-top: 1.5rem;
-    }
-    .download a {
-      background: #2563eb;
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-    .download a:hover {
-      background: #1e40af;
+    .bi {
+      color: #1d4ed8;
+      font-size: 1rem;
     }
     .address {
       margin-top: 1rem;
@@ -141,10 +112,20 @@
       margin: 2rem 0 1.5rem 0;
       border-radius: 0.5rem;
     }
-    .bi {
-      margin-right: 6px;
-      vertical-align: text-bottom;
-      color: #1d4ed8;
+    .download {
+      margin-top: 1rem;
+    }
+    .download a {
+      background: #2563eb;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      display: inline-block;
+    }
+    .download a:hover {
+      background: #1e40af;
     }
   </style>
 </head>
@@ -162,11 +143,11 @@
 
     <h2>Главный специалист-эксперт отдела государственной службы, кадров и делопроизводства Московско-Окского БВУ Росводресурсов</h2>
 
-    <p><i class="bi bi-phone"></i><strong>Моб.:</strong> <a href="tel:+79256277718">+7 (925) 627-77-18</a></p>
-    <p><i class="bi bi-telephone"></i><strong>Тел. раб.:</strong> <a href="tel:+74955879907">+7 (495) 587-99-07, доб.161</a></p>
-    <p><i class="bi bi-envelope"></i><strong>Email:</strong> <a href="mailto:anna.bulavatskaya@voda.gov.ru">anna.bulavatskaya@voda.gov.ru</a></p>
-    <p><i class="bi bi-globe"></i><strong>Сайт:</strong> <a href="https://www.m-obvu.ru/" target="_blank" rel="noopener noreferrer">www.m-obvu.ru</a></p>
-    <p><i class="bi bi-vinyl"></i><strong>VK:</strong> <a href="https://vk.com/club217101985" target="_blank" rel="noopener noreferrer">vk.com/club217101985</a></p>
+    <div class="info-block"><i class="bi bi-phone"></i><strong>Моб.:</strong>&nbsp;<a href="tel:+79256277718">+7 (925) 627-77-18</a></div>
+    <div class="info-block"><i class="bi bi-telephone"></i><strong>Тел. раб.:</strong>&nbsp;<a href="tel:+74955879907">+7 (495) 587-99-07, доб.161</a></div>
+    <div class="info-block"><i class="bi bi-envelope"></i><strong>Email:</strong>&nbsp;<a href="mailto:anna.bulavatskaya@voda.gov.ru">anna.bulavatskaya@voda.gov.ru</a></div>
+    <div class="info-block"><i class="bi bi-globe"></i><strong>Сайт:</strong>&nbsp;<a href="https://www.m-obvu.ru/" target="_blank" rel="noopener noreferrer">www.m-obvu.ru</a></div>
+    <div class="info-block"><i class="bi bi-vinyl"></i><strong>VK:</strong>&nbsp;<a href="https://vk.com/club217101985" target="_blank" rel="noopener noreferrer">vk.com/club217101985</a></div>
 
     <div class="address">
       Адрес Московско-Окского БВУ:<br />улица Верхняя Красносельская, дом 17А, стр. 1Б,<br />г. Москва, 107140
