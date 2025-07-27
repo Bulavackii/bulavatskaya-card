@@ -44,31 +44,47 @@
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
-    h1 {
-      font-size: 1.4rem;
-      margin: 0.5rem 0;
-      color: #1d4ed8;
-      text-transform: uppercase;
-    }
-    h2 {
-      font-size: 0.95rem;
-      font-weight: 500;
-      color: #334155;
-      margin-bottom: 1.2rem;
-    }
     .logo {
       width: 100%;
       max-width: 300px;
       margin: 0 auto 1.5rem auto;
       display: block;
     }
+    .identity {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      margin-bottom: 1rem;
+      gap: 1rem;
+    }
+    .name-block {
+      flex: 1;
+    }
+    .surname {
+      font-size: 1.2rem;
+      color: #1d4ed8;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+    .name {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #1d4ed8;
+    }
     .avatar {
-      width: 100px;
-      height: 100px;
+      width: 90px;
+      height: 90px;
       object-fit: cover;
       border-radius: 50%;
-      margin-bottom: 1rem;
       border: 2px solid #1d4ed8;
+    }
+    h2 {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #334155;
+      margin-bottom: 1.2rem;
     }
     p, a {
       font-size: 0.95rem;
@@ -135,20 +151,31 @@
 <body>
   <div class="card">
     <img class="logo" src="gerb.png" alt="Герб Росводресурсов">
-    <h1>БУЛАВАЦКАЯ<br>Анна Алексеевна</h1>
-    <img class="avatar" src="ava.png" alt="Моя фотография">
+
+    <div class="identity">
+      <div class="name-block">
+        <div class="surname">БУЛАВАЦКАЯ</div>
+        <div class="name">Анна Алексеевна</div>
+      </div>
+      <img class="avatar" src="ava.png" alt="Моя фотография">
+    </div>
+
     <h2>Главный специалист-эксперт отдела государственной службы, кадров и делопроизводства Московско-Окского БВУ Росводресурсов</h2>
+
     <p><i class="bi bi-phone"></i><strong>Моб.:</strong> <a href="tel:+79256277718">+7 (925) 627-77-18</a></p>
     <p><i class="bi bi-telephone"></i><strong>Тел. раб.:</strong> <a href="tel:+74955879907">+7 (495) 587-99-07, доб.161</a></p>
     <p><i class="bi bi-envelope"></i><strong>Email:</strong> <a href="mailto:anna.bulavatskaya@voda.gov.ru">anna.bulavatskaya@voda.gov.ru</a></p>
     <p><i class="bi bi-globe"></i><strong>Сайт:</strong> <a href="https://www.m-obvu.ru/" target="_blank" rel="noopener noreferrer">www.m-obvu.ru</a></p>
     <p><i class="bi bi-vinyl"></i><strong>VK:</strong> <a href="https://vk.com/club217101985" target="_blank" rel="noopener noreferrer">vk.com/club217101985</a></p>
+
     <div class="address">
       Адрес Московско-Окского БВУ:<br />улица Верхняя Красносельская, дом 17А, стр. 1Б,<br />г. Москва, 107140
     </div>
+
     <div class="quote">
       "Всего одно знакомство может стать источником, из которого вырастет океан возможностей"
     </div>
+
     <div class="download">
       <a href="anna-bulavatskaya.vcf" download>Скачать контакт</a>
     </div>
