@@ -15,6 +15,7 @@
       --highlight: #2563eb;
       --card-bg: #ffffff;
       --icon-color: #2563eb;
+      --block-bg: #e2e8f0;
     }
 
     body {
@@ -38,34 +39,26 @@
 
     .org-header {
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
 
     .org-header img {
-      width: 100px;
+      max-width: 200px;
       height: auto;
       display: block;
       margin: 0 auto 1rem auto;
-    }
-
-    .org-header div {
-      font-size: 0.95rem;
-      line-height: 1.4;
     }
 
     .profile {
       display: flex;
       align-items: center;
       gap: 1rem;
+      justify-content: center;
     }
 
     .profile img {
       width: 80px;
       border-radius: 50%;
-    }
-
-    .profile-info {
-      flex: 1;
     }
 
     .profile-info h1 {
@@ -86,12 +79,13 @@
       font-size: 0.95rem;
       color: var(--text-color);
       line-height: 1.4;
+      text-align: center;
     }
 
     .info-block {
       margin-top: 1.2rem;
       padding: 0.8rem 1rem;
-      background: #e2e8f0;
+      background: var(--block-bg);
       border-radius: 0.6rem;
       display: flex;
       align-items: center;
@@ -106,41 +100,34 @@
 
     .quote {
       margin-top: 1.5rem;
-      background: #e2e8f0;
+      background: var(--block-bg);
       padding: 0.8rem 1rem;
       font-style: italic;
       border-radius: 0.6rem;
-    }
-
-    .download {
       text-align: center;
+    }
+
+    .button-row {
       margin-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
     }
 
-    .download a {
-      display: inline-block;
+    .button-row a, .button-row button {
+      flex: 1;
+      text-align: center;
       background: var(--highlight);
       color: white;
-      padding: 0.7rem 1.5rem;
-      border-radius: 8px;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .download a:hover {
-      background: #1e40af;
-    }
-
-    .theme-toggle {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background: var(--highlight);
-      color: white;
+      padding: 0.7rem 1rem;
       border: none;
-      padding: 0.4rem 0.8rem;
-      border-radius: 6px;
+      border-radius: 8px;
       cursor: pointer;
+      text-decoration: none;
+    }
+
+    .button-row button:hover, .button-row a:hover {
+      background: #1e40af;
     }
 
     body.dark {
@@ -149,18 +136,16 @@
       --secondary-color: #cbd5e1;
       --card-bg: #1e293b;
       --icon-color: #60a5fa;
+      --block-bg: #334155;
     }
   </style>
 </head>
 <body>
-  <button class="theme-toggle" onclick="toggleTheme()">Версия для слабовидящих</button>
   <div class="card">
     <div class="org-header">
       <img src="gerb_white.jpg" id="gerb" alt="Герб">
-      <div>
-        <div>Московско-Окское бассейновое водное управление</div>
-        <div>Федерального агентства водных ресурсов</div>
-      </div>
+      <div>Московско-Окское бассейновое водное управление</div>
+      <div>Федерального агентства водных ресурсов</div>
     </div>
 
     <div class="profile">
@@ -179,18 +164,19 @@
     </div>
 
     <div class="info-block"><i class="fas fa-mobile-alt" title="Мобильный"></i><a href="tel:+79256277718">+7 (925) 627-77-18</a></div>
-    <div class="info-block"><i class="fas fa-phone" title="Рабочий телефон"></i><a href="tel:+74955879907,161">+7 (495) 587-99-07, доб.161</a></div>
+    <div class="info-block"><i class="fas fa-phone" title="Рабочий"></i><a href="tel:+74955879907,161">+7 (495) 587-99-07, доб.161</a></div>
     <div class="info-block"><i class="fas fa-envelope" title="Email"></i><a href="mailto:anna.bulavatskaya@voda.gov.ru">anna.bulavatskaya@voda.gov.ru</a></div>
     <div class="info-block"><i class="fas fa-globe" title="Сайт"></i><a href="https://www.m-obvu.ru/" target="_blank">www.m-obvu.ru</a></div>
-    <div class="info-block"><i class="fab fa-vk" title="VK"></i><a href="https://vk.com/club217101985" target="_blank">vk.com/club217101985</a></div>
+    <div class="info-block"><i class="fab fa-vk" title="ВКонтакте"></i><a href="https://vk.com/club217101985" target="_blank">vk.com/club217101985</a></div>
     <div class="info-block"><i class="fas fa-map-marker-alt" title="Адрес"></i><strong>улица Верхняя Красносельская, дом 17А, стр. 1Б, г. Москва, 107140</strong></div>
 
     <div class="quote">
       "Всего одно знакомство может стать источником, из которого вырастет океан возможностей"
     </div>
 
-    <div class="download">
+    <div class="button-row">
       <a href="anna-bulavatskaya.vcf" download>Скачать контакт</a>
+      <button onclick="toggleTheme()">Версия для слабовидящих</button>
     </div>
   </div>
 
@@ -198,11 +184,7 @@
     function toggleTheme() {
       document.body.classList.toggle('dark');
       const gerb = document.getElementById('gerb');
-      if (document.body.classList.contains('dark')) {
-        gerb.src = 'gerb_black.jpg';
-      } else {
-        gerb.src = 'gerb_white.jpg';
-      }
+      gerb.src = document.body.classList.contains('dark') ? 'gerb_black.jpg' : 'gerb_white.jpg';
     }
   </script>
 </body>
