@@ -28,14 +28,15 @@
     .org-logo {
       display: block;
       margin: 0 auto 1rem auto;
-      max-width: 180px;
+      max-width: 220px;
     }
 
     .org-title {
       text-align: center;
-      font-size: 1rem;
+      font-size: 0.9rem;
       color: #334155;
       margin-bottom: 2rem;
+      line-height: 1.3;
     }
 
     .profile {
@@ -46,22 +47,22 @@
     }
 
     .profile img {
-      width: 80px;
-      height: 80px;
+      width: 90px;
+      height: 90px;
       object-fit: cover;
       border-radius: 50%;
     }
 
     .profile-info h1 {
       margin: 0;
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       text-transform: uppercase;
       color: #1d4ed8;
     }
 
     .profile-info h2 {
       margin: 0;
-      font-size: 1rem;
+      font-size: 1.2rem;
       color: #334155;
     }
 
@@ -70,6 +71,8 @@
       line-height: 1.4;
       margin-bottom: 1.5rem;
       color: #1f2937;
+      text-align: center;
+      text-transform: none;
     }
 
     .info-block {
@@ -80,10 +83,12 @@
       display: flex;
       align-items: center;
       gap: 0.75rem;
+      font-size: 0.95rem;
     }
 
     .info-block i {
       color: #2563eb;
+      min-width: 20px;
     }
 
     .quote {
@@ -97,8 +102,14 @@
 
     .btn-group {
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       gap: 1rem;
+    }
+
+    @media (min-width: 576px) {
+      .btn-group {
+        flex-direction: row;
+      }
     }
 
     /* ===== Режим для слабовидящих ===== */
@@ -136,18 +147,17 @@
     }
 
     .visually-impaired .org-title {
-  color: #ffffff !important;
-  font-weight: bold;
-}
+      color: #ffffff !important;
+      font-weight: bold;
+    }
 
-.visually-impaired .profile-info h2 {
-  color: #93c5fd !important;
-}
+    .visually-impaired .profile-info h2 {
+      color: #93c5fd !important;
+    }
 
-.visually-impaired .position {
-  color: #e5e7eb !important;
-}
-
+    .visually-impaired .position {
+      color: #e5e7eb !important;
+    }
   </style>
 </head>
 <body>
@@ -167,17 +177,17 @@
     </div>
 
     <div class="position">
-      Главный специалист-эксперт<br>
+      главный специалист-эксперт<br>
       отдела государственной службы, кадров и делопроизводства<br>
       Московско-Окского БВУ Росводресурсов
     </div>
 
     <div class="info-block"><i class="fas fa-mobile-alt"></i><a href="tel:+79256277718">+7 (925) 627-77-18</a></div>
     <div class="info-block"><i class="fas fa-phone"></i><a href="tel:+74955879907,161">+7 (495) 587-99-07, доб.161</a></div>
+    <div class="info-block"><i class="fas fa-map-marker-alt"></i><strong>улица Верхняя Красносельская, дом 17А, стр. 1Б, г. Москва, 107140</strong></div>
     <div class="info-block"><i class="fas fa-envelope"></i><a href="mailto:anna.bulavatskaya@voda.gov.ru">anna.bulavatskaya@voda.gov.ru</a></div>
     <div class="info-block"><i class="fas fa-globe"></i><a href="https://www.m-obvu.ru/" target="_blank">www.m-obvu.ru</a></div>
     <div class="info-block"><i class="fab fa-vk"></i><a href="https://vk.com/club217101985" target="_blank">vk.com/club217101985</a></div>
-    <div class="info-block"><i class="fas fa-map-marker-alt"></i><strong>улица Верхняя Красносельская, дом 17А, стр. 1Б, г. Москва, 107140</strong></div>
 
     <div class="quote">
       "Всего одно знакомство может стать источником, из которого вырастет океан возможностей"
