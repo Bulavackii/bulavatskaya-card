@@ -15,7 +15,6 @@
       --highlight: #2563eb;
       --card-bg: #ffffff;
       --icon-color: #2563eb;
-      --block-bg: #e2e8f0;
     }
 
     body {
@@ -39,14 +38,17 @@
 
     .org-header {
       text-align: center;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     .org-header img {
-      max-width: 200px;
+      width: 96px;
       height: auto;
-      display: block;
-      margin: 0 auto 1rem auto;
+      margin-bottom: 1rem;
+    }
+
+    .org-header div {
+      font-size: 0.95rem;
     }
 
     .profile {
@@ -59,6 +61,10 @@
     .profile img {
       width: 80px;
       border-radius: 50%;
+    }
+
+    .profile-info {
+      flex: 1;
     }
 
     .profile-info h1 {
@@ -85,7 +91,7 @@
     .info-block {
       margin-top: 1.2rem;
       padding: 0.8rem 1rem;
-      background: var(--block-bg);
+      background: #e2e8f0;
       border-radius: 0.6rem;
       display: flex;
       align-items: center;
@@ -100,33 +106,36 @@
 
     .quote {
       margin-top: 1.5rem;
-      background: var(--block-bg);
+      background: #e2e8f0;
       padding: 0.8rem 1rem;
       font-style: italic;
       border-radius: 0.6rem;
-      text-align: center;
     }
 
-    .button-row {
-      margin-top: 1.5rem;
+    .download-row {
       display: flex;
       justify-content: space-between;
       gap: 1rem;
+      margin-top: 1.5rem;
     }
 
-    .button-row a, .button-row button {
+    .download-row a, .download-row button {
       flex: 1;
-      text-align: center;
+      display: inline-block;
       background: var(--highlight);
       color: white;
-      padding: 0.7rem 1rem;
-      border: none;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+      text-align: center;
+      padding: 0.7rem 1.5rem;
       border-radius: 8px;
-      cursor: pointer;
       text-decoration: none;
+      transition: 0.3s;
+      border: none;
+      cursor: pointer;
     }
 
-    .button-row button:hover, .button-row a:hover {
+    .download-row a:hover, .download-row button:hover {
       background: #1e40af;
     }
 
@@ -136,7 +145,6 @@
       --secondary-color: #cbd5e1;
       --card-bg: #1e293b;
       --icon-color: #60a5fa;
-      --block-bg: #334155;
     }
   </style>
 </head>
@@ -163,20 +171,20 @@
       Росводресурсы
     </div>
 
-    <div class="info-block"><i class="fas fa-mobile-alt" title="Мобильный"></i><a href="tel:+79256277718">+7 (925) 627-77-18</a></div>
-    <div class="info-block"><i class="fas fa-phone" title="Рабочий"></i><a href="tel:+74955879907,161">+7 (495) 587-99-07, доб.161</a></div>
-    <div class="info-block"><i class="fas fa-envelope" title="Email"></i><a href="mailto:anna.bulavatskaya@voda.gov.ru">anna.bulavatskaya@voda.gov.ru</a></div>
-    <div class="info-block"><i class="fas fa-globe" title="Сайт"></i><a href="https://www.m-obvu.ru/" target="_blank">www.m-obvu.ru</a></div>
-    <div class="info-block"><i class="fab fa-vk" title="ВКонтакте"></i><a href="https://vk.com/club217101985" target="_blank">vk.com/club217101985</a></div>
-    <div class="info-block"><i class="fas fa-map-marker-alt" title="Адрес"></i><strong>улица Верхняя Красносельская, дом 17А, стр. 1Б, г. Москва, 107140</strong></div>
+    <div class="info-block"><i class="fas fa-mobile-alt"></i><a href="tel:+79256277718">+7 (925) 627-77-18</a></div>
+    <div class="info-block"><i class="fas fa-phone"></i><a href="tel:+74955879907,161">+7 (495) 587-99-07, доб.161</a></div>
+    <div class="info-block"><i class="fas fa-envelope"></i><a href="mailto:anna.bulavatskaya@voda.gov.ru">anna.bulavatskaya@voda.gov.ru</a></div>
+    <div class="info-block"><i class="fas fa-globe"></i><a href="https://www.m-obvu.ru/" target="_blank">www.m-obvu.ru</a></div>
+    <div class="info-block"><i class="fab fa-vk"></i><a href="https://vk.com/club217101985" target="_blank">vk.com/club217101985</a></div>
+    <div class="info-block"><i class="fas fa-map-marker-alt"></i><strong>улица Верхняя Красносельская, дом 17А, стр. 1Б, г. Москва, 107140</strong></div>
 
     <div class="quote">
       "Всего одно знакомство может стать источником, из которого вырастет океан возможностей"
     </div>
 
-    <div class="button-row">
-      <a href="anna-bulavatskaya.vcf" download>Скачать контакт</a>
-      <button onclick="toggleTheme()">Версия для слабовидящих</button>
+    <div class="download-row">
+      <a href="anna-bulavatskaya.vcf" download><i class="fas fa-download"></i> Скачать контакт</a>
+      <button onclick="toggleTheme()"><i class="fas fa-low-vision"></i> Версия для слабовидящих</button>
     </div>
   </div>
 
@@ -184,7 +192,11 @@
     function toggleTheme() {
       document.body.classList.toggle('dark');
       const gerb = document.getElementById('gerb');
-      gerb.src = document.body.classList.contains('dark') ? 'gerb_black.jpg' : 'gerb_white.jpg';
+      if (document.body.classList.contains('dark')) {
+        gerb.src = 'gerb_black.jpg';
+      } else {
+        gerb.src = 'gerb_white.jpg';
+      }
     }
   </script>
 </body>
