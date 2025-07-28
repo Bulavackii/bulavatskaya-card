@@ -13,6 +13,7 @@
       background: linear-gradient(135deg, #e0f2fe, #f8fafc);
       margin: 0;
       padding: 2rem;
+      transition: all 0.3s ease;
     }
 
     .card {
@@ -99,6 +100,39 @@
       justify-content: space-between;
       gap: 1rem;
     }
+
+    /* ===== Режим для слабовидящих ===== */
+    .visually-impaired {
+      background: #0f172a !important;
+      color: #ffffff !important;
+    }
+
+    .visually-impaired .card {
+      background: #1e293b !important;
+      color: #ffffff !important;
+    }
+
+    .visually-impaired .info-block {
+      background-color: #334155 !important;
+      color: #ffffff !important;
+      border: 1px solid #94a3b8;
+    }
+
+    .visually-impaired a {
+      color: #93c5fd !important;
+      font-weight: bold;
+    }
+
+    .visually-impaired .quote {
+      background-color: #1e3a8a !important;
+      border-left-color: #93c5fd !important;
+      color: #e0f2fe !important;
+    }
+
+    .visually-impaired .btn {
+      background-color: #2563eb !important;
+      border: none;
+    }
   </style>
 </head>
 <body>
@@ -135,15 +169,18 @@
     </div>
 
     <div class="btn-group">
-      <a href="anna-bulavatskaya.vcf" class="btn btn-primary w-100" download><i class="fas fa-download"></i> Скачать контакт</a>
-      <button class="btn btn-primary w-100" onclick="toggleTheme()"><i class="fas fa-low-vision"></i> Версия для слабовидящих</button>
+      <a href="anna-bulavatskaya.vcf" class="btn btn-primary w-100" download>
+        <i class="fas fa-download"></i> Скачать контакт
+      </a>
+      <button class="btn btn-primary w-100" onclick="toggleTheme()">
+        <i class="fas fa-low-vision"></i> Версия для слабовидящих
+      </button>
     </div>
   </div>
 
   <script>
     function toggleTheme() {
-      document.body.classList.toggle('bg-dark');
-      document.body.classList.toggle('text-light');
+      document.body.classList.toggle('visually-impaired');
     }
   </script>
 </body>
