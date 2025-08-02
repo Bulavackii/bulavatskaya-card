@@ -48,21 +48,22 @@
     }
 
     .profile {
-  display: flex;
-  flex-wrap: nowrap; /* запрет переноса */
-  align-items: center;
-  gap: 1rem;
-  justify-content: flex-start; /* выравнивание влево */
-  text-align: left;
-  margin-bottom: 1.5rem;
-  overflow-x: auto; /* если очень узко, будет горизонтальный скролл */
-}
+      display: flex;
+      flex-wrap: nowrap; /* запрет переноса */
+      align-items: center;
+      gap: 1rem;
+      justify-content: flex-start; /* выравнивание влево */
+      text-align: left;
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease;
+    }
 
     .profile img {
       width: 90px;
       height: 90px;
       object-fit: cover;
       border-radius: 50%;
+      flex-shrink: 0;
     }
 
     .profile-info h1 {
@@ -70,12 +71,14 @@
       font-size: 1.5rem;
       text-transform: uppercase;
       color: #1d4ed8;
+      white-space: nowrap;
     }
 
     .profile-info h2 {
       margin: 0;
       font-size: 1.2rem;
       color: #334155;
+      white-space: nowrap;
     }
 
     .position {
@@ -225,7 +228,27 @@
     function toggleTheme() {
       document.body.classList.toggle('visually-impaired');
     }
+
+    function scaleProfile() {
+      const profile = document.querySelector('.profile');
+      const card = document.querySelector('.card');
+
+      profile.style.transform = ''; // сброс масштабирования
+
+      const profileWidth = profile.scrollWidth;
+      const cardWidth = card.clientWidth;
+
+      if (profileWidth > cardWidth) {
+        const scale = cardWidth / profileWidth;
+        profile.style.transform = `scale(${scale})`;
+        profile.style.transformOrigin = 'left center';
+      } else {
+        profile.style.transform = '';
+      }
+    }
+
+    window.addEventListener('resize', scaleProfile);
+    window.addEventListener('load', scaleProfile);
   </script>
 </body>
 </html>
-
