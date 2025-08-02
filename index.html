@@ -25,11 +25,18 @@
       padding: 2rem;
     }
 
-    img.org-logo {
-      width: 220px;
-      height: auto;
-      display: block;
+    .org-logo {
+      width: 45px;
+      height: 45px;
+      background-image: url('gerb_white.jpg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
       margin: 0 auto 1rem auto;
+    }
+
+    .visually-impaired .org-logo {
+      background-image: url('gerb_black.jpg');
     }
 
     .org-title {
@@ -73,7 +80,6 @@
       margin-bottom: 1.5rem;
       color: #1f2937;
       text-align: center;
-      text-transform: none;
     }
 
     .info-block {
@@ -159,16 +165,11 @@
     .visually-impaired .position {
       color: #e5e7eb !important;
     }
-
-    .visually-impaired img.org-logo {
-      width: 45px !important;
-      height: auto !important;
-    }
   </style>
 </head>
 <body>
   <div class="card">
-    <img src="gerb_white.jpg" alt="Герб" class="org-logo">
+    <div class="org-logo"></div>
     <div class="org-title">
       <div>Московско-Окское бассейновое водное управление</div>
       <div>Федерального агентства водных ресурсов</div>
