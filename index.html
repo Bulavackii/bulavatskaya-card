@@ -20,6 +20,7 @@
       background: #fff;
       border-radius: 1rem;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 800px;
       margin: auto;
       padding: 2rem;
     }
@@ -46,6 +47,16 @@
       line-height: 1.3;
     }
 
+    .profile {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      justify-content: center;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
     .profile img {
       width: 90px;
       height: 90px;
@@ -69,7 +80,7 @@
     .position {
       font-size: 0.95rem;
       line-height: 1.4;
-      margin: 1rem 0 1.5rem;
+      margin-bottom: 1.5rem;
       color: #1f2937;
       text-align: center;
     }
@@ -110,10 +121,6 @@
       .btn-group {
         flex-direction: row;
       }
-    }
-
-    .bvu {
-      font-size: 0.60rem;
     }
 
     /* ===== Режим для слабовидящих ===== */
@@ -162,6 +169,10 @@
     .visually-impaired .position {
       color: #e5e7eb !important;
     }
+
+    .bvu {
+      font-size: 0.7rem;
+    }
   </style>
 </head>
 <body>
@@ -173,15 +184,11 @@
         <div class="bvu">Федерального агентства водных ресурсов</div>
       </div>
 
-      <div class="row g-3 align-items-center mb-3 text-center text-sm-start">
-        <div class="col-12 col-sm-auto">
-          <img src="ava.png" alt="Фото" class="mx-auto d-block">
-        </div>
-        <div class="col">
-          <div class="profile-info">
-            <h1>БУЛАВАЦКАЯ</h1>
-            <h2>Анна Алексеевна</h2>
-          </div>
+      <div class="profile">
+        <img src="ava.png" alt="Фото">
+        <div class="profile-info">
+          <h1>БУЛАВАЦКАЯ</h1>
+          <h2>Анна Алексеевна</h2>
         </div>
       </div>
 
@@ -193,7 +200,7 @@
 
       <div class="info-block"><i class="fas fa-mobile-alt"></i><a href="tel:+79256277718">+7 (925) 627-77-18</a></div>
       <div class="info-block"><i class="fas fa-phone"></i><a href="tel:+74955879907,161">+7 (495) 587-99-07, доб.161</a></div>
-      <div class="info-block"><i class="fas fa-map-marker-alt"></i><span class="text-primary">улица Верхняя Красносельская, дом 17А, стр. 1Б, г. Москва, 107140</span></div>
+      <div class="info-block"><i class="fas fa-map-marker-alt"></i><span style="color: #2563eb;">улица Верхняя Красносельская, дом 17А, стр. 1Б, г. Москва, 107140</span></div>
       <div class="info-block"><i class="fas fa-envelope"></i><a href="mailto:anna.bulavatskaya@voda.gov.ru">anna.bulavatskaya@voda.gov.ru</a></div>
       <div class="info-block"><i class="fas fa-globe"></i><a href="https://www.m-obvu.ru/" target="_blank">www.m-obvu.ru</a></div>
       <div class="info-block"><i class="fab fa-vk"></i><a href="https://vk.com/club217101985" target="_blank">vk.com/club217101985</a></div>
