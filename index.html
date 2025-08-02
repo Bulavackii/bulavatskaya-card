@@ -48,13 +48,15 @@
     }
 
     .profile {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 1rem;
-      text-align: left;
-      margin-bottom: 1.5rem;
-    }
+  display: flex;
+  flex-wrap: nowrap; /* запрет переноса */
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-start; /* выравнивание влево */
+  text-align: left;
+  margin-bottom: 1.5rem;
+  overflow-x: auto; /* если очень узко, будет горизонтальный скролл */
+}
 
     .profile img {
       width: 90px;
@@ -226,3 +228,4 @@
   </script>
 </body>
 </html>
+
