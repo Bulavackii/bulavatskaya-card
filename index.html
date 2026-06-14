@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <!-- Open Graph meta tags -->
-<meta property="og:title" content="Анна Булавацкая – Визитка" />
-<meta property="og:description" content="Главный специалист-эксперт Московско-Окского БВУ Росводресурсов" />
-<meta property="og:image" content="https://bulavackii.github.io/bulavatskaya-card/preview1.png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://bulavackii.github.io/bulavatskaya-card/" />
-<meta property="og:type" content="website" />
-<meta property="og:locale" content="ru_RU" />
+  <meta property="og:title" content="Анна Булавацкая – Визитка" />
+  <meta property="og:description" content="Главный специалист-эксперт Московско-Окского БВУ Росводресурсов" />
+  <meta property="og:image" content="https://bulavackii.github.io/bulavatskaya-card/preview1.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://bulavackii.github.io/bulavatskaya-card/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
 
-<!-- Twitter Card meta tags -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Анна Булавацкая – Визитка" />
-<meta name="twitter:description" content="Главный специалист-эксперт Московско-Окского БВУ Росводресурсов" />
-<meta name="twitter:image" content="https://bulavackii.github.io/bulavatskaya-card/preview1.png" />
+  <!-- Twitter Card meta tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Анна Булавацкая – Визитка" />
+  <meta name="twitter:description" content="Главный специалист-эксперт Московско-Окского БВУ Росводресурсов" />
+  <meta name="twitter:image" content="https://bulavackii.github.io/bulavatskaya-card/preview1.png" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Анна Булавацкая – Визитка</title>
@@ -65,10 +65,10 @@
 
     .profile {
       display: flex;
-      flex-wrap: nowrap; /* запрет переноса */
+      flex-wrap: nowrap;
       align-items: center;
       gap: 1rem;
-      justify-content: flex-start; /* выравнивание влево */
+      justify-content: flex-start;
       text-align: left;
       margin-bottom: 1.5rem;
       transition: transform 0.3s ease;
@@ -122,6 +122,44 @@
       min-width: 20px;
     }
 
+    /* Стили для блоков обязанностей */
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #1e3a8a;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      border-bottom: 2px solid #3b82f6;
+      padding-bottom: 0.25rem;
+    }
+
+    .responsibilities-block {
+      background-color: #f8fafc;
+      border-left: 4px solid #3b82f6;
+      border-radius: 0 0.5rem 0.5rem 0;
+      padding: 1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .responsibilities-list {
+      margin: 0;
+      padding-left: 1.25rem;
+      font-size: 0.9rem;
+      color: #334155;
+    }
+
+    .responsibilities-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    .responsibilities-list li strong {
+      color: #0f172a;
+    }
+
+    .responsibilities-list li:last-child {
+      margin-bottom: 0;
+    }
+
     .quote {
       background: #f1f5f9;
       font-style: italic;
@@ -163,6 +201,26 @@
     .visually-impaired a {
       color: #00ffff !important;
       font-weight: bold;
+    }
+
+    .visually-impaired .section-title {
+      color: #00ffff !important;
+      border-bottom-color: #00ffff !important;
+    }
+
+    .visually-impaired .responsibilities-block {
+      background-color: #111 !important;
+      border-left-color: #00ffff !important;
+      border: 1px solid #444;
+      border-left-width: 4px;
+    }
+
+    .visually-impaired .responsibilities-list {
+      color: #e5e7eb !important;
+    }
+
+    .visually-impaired .responsibilities-list li strong {
+      color: #00ffff !important;
     }
 
     .visually-impaired .quote {
@@ -218,10 +276,10 @@
         Московско-Окского БВУ Росводресурсов
       </div>
 
+      <!-- Контакты -->
       <div class="info-block"><i class="fas fa-mobile-alt"></i><a href="tel:+79256277718">+7 (925) 627-77-18</a></div>
       <div class="info-block"><i class="fas fa-phone"></i><a href="tel:+74955879907,161">+7 (495) 587-99-07, доб.161</a></div>
 
-      <!-- Адрес: ссылка на Яндекс.Карты, без "г." -->
       <div class="info-block">
         <i class="fas fa-map-marker-alt"></i>
         <a href="https://yandex.ru/maps/?text=Москва,+улица+Верхняя+Красносельская,+дом+17А,+стр.+1Б"
@@ -233,6 +291,60 @@
       <div class="info-block"><i class="fas fa-envelope"></i><a href="mailto:anna.bulavatskaya@voda.gov.ru">anna.bulavatskaya@voda.gov.ru</a></div>
       <div class="info-block"><i class="fas fa-globe"></i><a href="https://www.m-obvu.ru/" target="_blank">www.m-obvu.ru</a></div>
       <div class="info-block"><i class="fab fa-vk"></i><a href="https://vk.com/club217101985" target="_blank">vk.com/club217101985</a></div>
+
+      <!-- Раздел обязанностей (перед достижениями) -->
+      <div class="section-title">Опыт работы и обязанности</div>
+
+      <!-- 1. Главный специалист-эксперт -->
+      <div class="responsibilities-block">
+        <div class="fw-bold mb-2 text-dark" style="font-size: 0.95rem;">Главный специалист-эксперт отдела государственной службы, кадров и делопроизводства:</div>
+        <ul class="responsibilities-list">
+          <li><strong>Цифровизация и СЭД:</strong> организация и координация документооборота, в том числе электронного (СМЭВ и МЭДО), внедрение цифровых технологий в деловые процессы ведомства.</li>
+          <li><strong>ИТ и инфосопровождение:</strong> курирование вопросов ИТ-инфраструктуры, информационной безопасности и контентного наполнения официальных ресурсов (персональное ведение официальных страниц госоргана).</li>
+          <li><strong>Обеспечение работы руководства:</strong> организация эффективной деятельности приемной руководителя и координация работы секретариата.</li>
+        </ul>
+      </div>
+
+      <!-- 2. Начальник организационного отдела -->
+      <div class="responsibilities-block">
+        <div class="fw-bold mb-2 text-dark" style="font-size: 0.95rem;">Начальник организационного отдела:</div>
+        <ul class="responsibilities-list">
+          <li><strong>Управленческая деятельность:</strong> руководство отделом, ежедневное планирование работы аппарата администрации, включая деятельность главы района, протокольное обеспечение совещаний и рабочих встреч при главе района.</li>
+          <li><strong>Организация масштабных процессов:</strong> координация подготовки общественно-политических и электоральных мероприятий (выборы всех уровней), обеспечение визитов высших должностных лиц региона.</li>
+          <li><strong>Документооборот и контроль:</strong> организация единой системы делопроизводства, роспись входящей корреспонденции, в том числе первичный анализ входящей корреспонденции; жесткий контроль исполнения поручений вышестоящего руководства.</li>
+          <li><strong>Взаимодействие и IT:</strong> координация связей с муниципальными образованиями, ОМСУ региона, общественными советами и НКО; курирование вопросов ИТ-инфраструктуры и официального сайта.</li>
+        </ul>
+      </div>
+
+      <!-- 3. Специалист по работе с обращениями граждан -->
+      <div class="responsibilities-block">
+        <div class="fw-bold mb-2 text-dark" style="font-size: 0.95rem;">Специалист по работе с обращениями граждан:</div>
+        <ul class="responsibilities-list">
+          <li><strong>Администрирование процессов:</strong> организация работы с обращениями граждан в строгом соответствии с законодательством.</li>
+          <li><strong>Контроль качества:</strong> мониторинг своевременности, полноты и юридической грамотности ответов, подготовленных структурными подразделениями.</li>
+          <li><strong>Аналитика и оптимизация:</strong> анализ поступающих обращений для руководства, внедрение мер по сокращению сроков их рассмотрения и оптимизации рабочих процессов.</li>
+        </ul>
+      </div>
+
+      <!-- 4. Специалист по делам молодежи -->
+      <div class="responsibilities-block">
+        <div class="fw-bold mb-2 text-dark" style="font-size: 0.95rem;">Специалист по делам молодежи:</div>
+        <ul class="responsibilities-list">
+          <li><strong>Реализация госполитики:</strong> разработка и исполнение муниципальных программ в сфере молодежной политики и мер соцподдержки.</li>
+          <li><strong>Проектная деятельность:</strong> организация районных, областных мероприятий, создание и методическое сопровождение деятельности Молодежного совета района.</li>
+          <li><strong>Продвижение:</strong> представление и продвижение интересов и проектов молодежи муниципального района на региональном уровне.</li>
+        </ul>
+      </div>
+
+      <!-- 5. Менеджер отдела продаж -->
+      <div class="responsibilities-block">
+        <div class="fw-bold mb-2 text-dark" style="font-size: 0.95rem;">Менеджер отдела продаж:</div>
+        <ul class="responsibilities-list">
+          <li><strong>Высокий сервис (клиентоцентричность):</strong> обеспечение премиального уровня обслуживания клиентов, формирование долгосрочной лояльности и повторных продаж.</li>
+          <li><strong>Корпоративные стандарты:</strong> строжайшее соблюдение деловой ethics, регламентов бренда и стандартов качества дилерского центра.</li>
+          <li><strong>Имиджевый менеджмент:</strong> поддержание высокого статуса официального дилера на рынке через экспертное консультирование и развитие клиентской базы.</li>
+        </ul>
+      </div>
 
       <div class="quote">
         "Всего одно знакомство может стать источником, из которого вырастет океан возможностей"
@@ -258,7 +370,7 @@
       const profile = document.querySelector('.profile');
       const card = document.querySelector('.card');
 
-      profile.style.transform = ''; // сброс масштабирования
+      profile.style.transform = '';
 
       const profileWidth = profile.scrollWidth;
       const cardWidth = card.clientWidth;
